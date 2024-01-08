@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <!-- Signup Page -->
+    <div id="signup-container" style="display: none;">
+        <h2>Signup</h2>
+        <form id="signup-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+
+            <button type="submit">Signup</button>
+            <button id="goToLoginButton">Go to Login</button>
+        </form>
+    </div>
+
+    <!-- Login Page -->
+    <div id="login-container" style="display: none;">
+        <h2>Login</h2>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <!-- User Page -->
+    <div id="user-container" style="display: none;">
+        <div id="user-page-header">
+            <h2>Books published by you</h2>
+            <button id="publish-button">Publish a Book</button>
+            <button id="see-all-published-button">See All Published Books</button>
+            <button id="logout-button">Logout</button>
+        </div>
+        <!-- Rest of your content... -->
+        <div id="user-books"></div>
+    </div>
+
+    <!-- Publish Page -->
+    <div id="publish-container" style="display: none;">
+        <h2>Publish</h2>
+        <form id="publish-form">
+            <label for="title">Title:</label>
+            <input type="text" id="title" required>
+
+            <label for="author">Author:</label>
+            <input type="text" id="author" required>
+
+            <label for="genre">Genre:</label>
+            <input type="text" id="genre" required>
+
+            <label for="description">Description:</label>
+            <textarea id="description" required></textarea>
+
+            <label for="language">Language:</label>
+            <input type="text" id="language" required>
+
+            <button type="submit">Publish</button>
+        </form>
+    </div>
+
+    <!-- Published Page -->
+    <div id="published-container" style="display: none;">
+        <div id="published-page-header">
+            <h2 id="published-books-page-header">Published Books</h2>
+            <div id="search-bar-container">
+                <input type="text" id="search-input" placeholder="Search by title...">
+                <button id="search-button">Search</button>
+            </div>
+        </div>
+        <div id="published-books"></div>
+        <button id="load-more" style="display: none;">Load More</button>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
